@@ -1,4 +1,3 @@
-test_main.py
 from fastapi.testclient import TestClient
 from main import app
  
@@ -10,4 +9,3 @@ def test_health():
 def test_add_and_list():
     client.post("/items?name=pain")
     assert "pain" in client.get("/items").json()
- 
